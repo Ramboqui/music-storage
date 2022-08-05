@@ -11,7 +11,7 @@ export class AppComponent {
 
   items: MenuItem[] = [
     { label: 'Home' },
-    { label: 'test1' },
+    { label: 'Create Music', routerLink: 'create-music' },
     { label: 'test2' },
     { label: 'test3' },
   ];

@@ -5,12 +5,22 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./pages/home-page/home-page.module').then(m => m.HomePageModule)
-  }
+    loadChildren: () =>
+      import('./pages/home-page/home-page.module').then(
+        (m) => m.HomePageModule
+      ),
+  },
+  {
+    path: 'create-music',
+    loadChildren: () =>
+      import('./pages/create-music/create-music.module').then(
+        (m) => m.CreateMusicModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
