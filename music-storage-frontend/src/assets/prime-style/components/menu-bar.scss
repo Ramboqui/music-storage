@@ -1,0 +1,18 @@
+.p-menubar {
+    background-color: transparent;
+    border          : none;
+
+    .p-menubar-root-list {
+        gap: 1.2em;
+
+        &>.p-menuitem {
+            &>.p-menuitem-link {
+                padding: 0.2rem;
+
+                .p-menuitem-text {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
