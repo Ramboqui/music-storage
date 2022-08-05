@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,800;1,100;1,200;1,400;1,700&display=swap');
+
+:root {
+  --first: #292F40;
+  --second: #8065A6;
+  --third: #D7D7D9;
+  --fourth: #8D86A6;
+  --fifth: #C4BFD9;
+
+  --poppins: 'Poppins', sans-serif;
+
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

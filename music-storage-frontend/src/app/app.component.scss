@@ -1,0 +1,31 @@
+header, footer {
+  height: 70px;
+  padding: 20px;
+  background-color: var(--first);
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  font-family: var(--poppins);
+  font-weight: 400;
+  .profile-pic {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+
