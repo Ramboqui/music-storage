@@ -5,5 +5,5 @@ import com.gomes.custodio.musicstorage.adapter.output.persistence.postgree.entit
 data class MusicDomain(
     val name: String,
     val composer: String,
-    val sheetList: List<SheetDomain>
+    val sheetList: List<SheetDomain>?
 )

@@ -11,23 +11,23 @@ import javax.persistence.*
 @Getter
 @Setter
 class SheetEntity(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "music_id", referencedColumnName = "id")
-    var music: MusicEntity,
-    val tone: String,
-    val musicalInstrument: String,
-    val sheetKey: String,
-    val arranger: String,
-    val createdDate: ZonedDateTime
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        var id: Long,
+        @ManyToOne(fetch = FetchType.LAZY, optional = false)
+        @JoinColumn(name = "music_id", referencedColumnName = "id")
+        var music: MusicEntity,
+        val tone: String,
+        val musicalInstrument: String,
+        val sheetKey: String,
+        val arranger: String,
+        val createdDate: ZonedDateTime
 )
 
 fun SheetEntity.toSheetDomain() = SheetDomain(
-    tone = tone,
-    musicalInstrument = musicalInstrument,
-    sheetKey = sheetKey,
-    arranger = arranger,
-    createdDate = createdDate
+        tone = tone,
+        musicalInstrument = musicalInstrument,
+        sheetKey = sheetKey,
+        arranger = arranger,
+        createdDate = createdDate
 )

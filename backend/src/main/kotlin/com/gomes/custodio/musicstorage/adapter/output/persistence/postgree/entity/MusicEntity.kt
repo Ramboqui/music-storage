@@ -10,17 +10,24 @@ import javax.persistence.*
 @Getter
 @Setter
 class MusicEntity(
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long,
-    val musicName: String,
-    val composer: String,
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "music")
-    val sheetList: List<SheetEntity>
+        @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+        var id: Long?,
+        val musicName: String,
+        val composer: String,
+        @OneToMany(fetch = FetchType.LAZY, mappedBy = "music")
+        val sheetList: List<SheetEntity>?
 ) {
 
 }
 fun MusicEntity.toMusicDomain() = MusicDomain(
     name = musicName,
     composer = composer,
-    sheetList = sheetList.map { it.toSheetDomain() }
+    sheetList = sheetList?.map { it.toSheetDomain() } ?: null
+)
+
+fun MusicDomain.toMusicEntity() = MusicEntity(
+        id = null,
+        musicName = name,
+        composer = composer,
+        sheetList = null
 )
