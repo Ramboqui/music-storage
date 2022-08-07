@@ -6,4 +6,6 @@ import reactor.core.publisher.Flux
 interface MusicPort {
 
     fun findAll() : List<MusicDomain>
+
+    fun save(musicDomain: MusicDomain): MusicDomain
 }
