@@ -44,7 +44,9 @@ header {
 }
 
 main {
-  padding: 20px;
-  flex   : 1;
-  min-height: calc(100% - 70px - 100px);
+  padding        : 20px;
+  flex           : 1 1 auto;
+  display        : flex;
+  justify-content: center;
+  flex-direction : column;
 }

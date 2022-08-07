@@ -1,0 +1,35 @@
+.form-container {
+  display         : flex;
+  justify-content : center;
+  width           : 60%;
+  flex-direction  : column;
+  background-color: var(--first);
+  padding         : 20px;
+  margin          : auto;
+  border-radius   : 5px;
+  box-shadow      : 5px 5px rgba(37, 37, 37, 0.678);
+  gap             : 20px;
+  color           : white;
+  font-size: 20px;
+  border: 1px  black;
+}
+
+input {
+  background-color: transparent;
+  border          : none;
+  border-bottom   : 1px solid black;
+  outline         : none;
+  font-size: 16px;
+  margin-left     : 5px;
+}
+
+.button-container {
+  display        : flex;
+  justify-content: center;
+}
+
+.click-button {
+  &.p-button {
+    width: 200px;
+  }
+}
