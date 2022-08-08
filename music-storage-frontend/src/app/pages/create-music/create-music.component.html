@@ -1,11 +1,12 @@
 <div>
   <div class="form-container">
     <label for="name"> Song name</label>
-    <input type="text" placeholder="name">
+    <input [(ngModel)]="musicRequest.name" type="text" placeholder="name">
     <label for="composer">Composer</label>
-    <input type="text" placeholder="composer">
+    <input [(ngModel)]="musicRequest.composer" type="text" placeholder="composer">
     <div class="button-container">
-      <p-button label="Click" icon="pi pi-check" iconPos="left" styleClass="click-button"></p-button>
+      <p-button label="Click" icon="pi pi-check" iconPos="left" styleClass="click-button" (onClick)="createMusic()">
+      </p-button>
     </div>
   </div>
 </div>
