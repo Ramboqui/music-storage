@@ -7,6 +7,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter
 import org.springframework.security.config.web.servlet.invoke
+import org.springframework.security.web.SecurityFilterChain
 import org.springframework.web.cors.CorsConfiguration
 import org.springframework.web.cors.CorsConfigurationSource
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource
@@ -16,8 +17,10 @@ import java.util.Arrays
 @Order(1)
 @Configuration
 @EnableWebSecurity
-class WebSecurity: WebSecurityConfigurerAdapter() {
-    override fun configure(http: HttpSecurity) {
+class WebSecurity {
+
+    @Bean
+    fun configure(http: HttpSecurity): SecurityFilterChain {
         http.invoke {
             csrf { disable() }
             cors { corsConfigurationSource() }
@@ -25,6 +28,7 @@ class WebSecurity: WebSecurityConfigurerAdapter() {
                 authorize(anyRequest, permitAll)
             }
         }
+        return http.build()
     }
 
     @Bean
