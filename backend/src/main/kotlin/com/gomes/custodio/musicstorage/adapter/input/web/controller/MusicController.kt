@@ -5,11 +5,7 @@ import com.gomes.custodio.musicstorage.adapter.input.web.model.request.toMusicDo
 import com.gomes.custodio.musicstorage.adapter.input.web.model.response.MusicResponse
 import com.gomes.custodio.musicstorage.adapter.input.web.model.response.toWebResponse
 import com.gomes.custodio.musicstorage.application.port.input.MusicUseCase
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PostMapping
-import org.springframework.web.bind.annotation.RequestBody
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1/music")
